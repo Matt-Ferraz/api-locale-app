@@ -4,6 +4,8 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+scripts: 
+  dev: "tsc dist/app.ts"
 dependencies:
   bcryptjs:
     specifier: ^2.4.3
