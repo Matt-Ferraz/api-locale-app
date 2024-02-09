@@ -1,6 +1,12 @@
-import { Sequelize } from "sequelize"
+import { sequelize } from './sequelize'
+import logger from '@/libs/logger'
 
-const sequelize = new Sequelize('database', 'username', 'password', {
-    host: 'localhost',
-    dialect:'postgres'
-})
+export default async (): Promise<any> => {
+  try {
+    const connection = await sequelize.authenticate()
+    logger.info('Database connected')
+    return Promise.resolve(connection)
+  } catch (error) {
+    Promise.reject(error)
+  }
+}

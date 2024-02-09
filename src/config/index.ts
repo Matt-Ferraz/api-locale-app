@@ -1,4 +1,4 @@
-// type Stage = 'local' | 'development' | 'production'
+type Stage = 'local' | 'development' | 'production'
 type Dialect = 'postgres' | 'mysql' | 'sqlite'
 
 type DB = {
@@ -11,7 +11,8 @@ type DB = {
   storage: string
 }
 interface Env {
-    db: DB
+    db: DB,
+    stage: Stage
   }
 
 const config = {
