@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "moduleResolution": "node",   
+    "outDir": "build",
     "module": "commonjs",
-    "outDir": "./dist",
-    "strict": true,
+    "target": "es2022",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
+    "removeComments": true,
+    "rootDirs": ["src"],
+    "baseUrl": "src",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+      "@/*": ["*"]
+    },
+  },
+  "include": ["src", "src/global.d.ts"],
+  "exclude": ["node_modules"],
+  "editorOptions": {
+    "tabSize": 2
   }
 }
