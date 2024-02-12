@@ -10,6 +10,7 @@ type DB = {
   dialect: Dialect
   storage: string
 }
+
 interface Env {
     db: DB,
     stage: Stage

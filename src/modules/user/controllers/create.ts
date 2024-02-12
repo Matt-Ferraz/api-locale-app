@@ -1,9 +1,9 @@
-import { User } from "../types/userTypes";
+import { User } from "../types/userTypes"
 
 const create = (user: User) => {
     console.log(user)
 }
 
-export default{
+export default {
     create
 }
